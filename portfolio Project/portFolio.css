@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@300;500;600&family=Silkscreen:wght@400;700&display=swap');
+:root {
+    --back-ground-main: #F3f4f6 ;
+    --back-ground-aside: #dad9d8 ;
+    --page-color: #feba31;
+    --text-color  : #272827;
+    --h3-font: 3rem;
+    --h6-font: 2rem;
+    --p-font: 1.1rem;
+    --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    transition: all .3s ease-in-out;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--back-ground-aside);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--page-color);
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: var(--back-ground-main);
+}
+/*=======ASIDE=======*/
+.aside {
+    width: 270px;
+    height: 100vh;
+    background-color: var(--page-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-right: .2px solid rgba(53, 51, 51, 0.163);
+    box-shadow: var(--box-shadow);
+    z-index: 100;
+}
+.user-profile {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid var(--back-ground-main);
+}
+.user-image {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+.user-image:hover{
+    transform: scale(1.02);
+}
+nav {
+    margin-top: 50px;
+    width: 200px;
+    text-align: center;
+}
+.links {
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    font-size: var(--p-font);
+    border-bottom: 1px solid var(--text-color);
+    padding: 5px 0;
+}
+.links a{
+    color: var(--text-color);
+    text-align: left;
+}
+.links a:hover{
+    color: var(--back-ground-aside);
+}
+.links i {
+    float: left;
+}
+.socialmedia {
+    margin-top: 50px;
+    width: 200px;
+    margin: auto;
+}
+.socialmedia ul{
+   display: flex;
+   width: 100%;
+   align-items: center;
+   justify-content: space-around;
+}
+.socialmedia ul li .fa{
+    font-size: 20px;
+}
+.socialmedia ul li .fa:hover{
+    color: #fff;
+}
+@media (max-width: 1100px){
+    .aside{
+        left: -273px;
+    }
+    .aside.active {
+        left: 0;
+    }
+}
+/*=======ASIDE END=======*/
+/*=======HUMBERGER =======*/
+.humberger {
+    width: 40px;
+    height: 40px;
+    background: var(--page-color);
+    color: #fff;
+    position: fixed;
+    right: -45px;
+    top: 20px;
+    border-radius: 5px;
+    z-index: 100;
+}
+.bars {
+    padding: 5px;
+    font-size: 30px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.humberger:hover {
+    box-shadow: var(--box-shadow);
+}
+@media (max-width: 1100px){
+   .humberger{
+    right: 45px;
+   }
+   .humberger.active{
+       transform: rotate(90deg);
+   }
+}
+/*=======HUMBERGER END=======*/
+/*======= content =======*/
+.content {
+    min-height: 100vh;
+    height: 100vh;
+    position: fixed;
+    left: 270px;
+    top: 0;
+    z-index: 0;
+}
+
+.container {
+    max-width: 10600px;
+    background-color: var(--back-ground-main);
+}
+section {
+    height: 100vh;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.pad15 {
+    padding: 0 15px;
+}
+.landpageInfo {
+   flex-basis: 47%;
+   flex-wrap: wrap;
+   min-width: 400px;
+   text-transform: capitalize;
+}
+.landpageInfo h6{
+    font-size: var(--h6-font);
+}
+.landpageInfo h3{
+    font-size: var(--h3-font);
+    flex-wrap: nowrap;
+}
+.landpageInfo h3 span{
+    color: var(--page-color);
+}
+.landpageInfo p {
+    font-size: var(--p-font);
+}
+.landpageInfo .btn{
+    margin: 7px 0;
+}
+
+.btn {
+    width: 150px;
+    padding: 7px 2px;
+    background-color: var(--page-color);
+    border-radius: 5px;
+    font-size: var(--p-font);
+}
+.btn:hover {
+    color: var(--back-ground-main);
+    box-shadow: var(--box-shadow);
+}
+.landpageIMG {
+    flex-basis: 47%;
+    min-width: 400px;
+    margin-top: 20px;
+}
+.image-profile{
+    width: 75%;
+    overflow: hidden;
+    margin: auto;
+}
+.myImge {
+    width: 100%;
+}
+@media(max-width: 1100px){
+    .content{
+        left: 0;
+    }
+}
